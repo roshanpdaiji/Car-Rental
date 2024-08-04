@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental</title>
+
+      <!----Bootstrap-->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+      <!--Fontawesome-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      
+      <!--Google Fonts-->
+  
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  
+      <!--Favicon-->
+      <link rel="icon" type="img/png" href="https://static.vecteezy.com/system/resources/previews/014/013/233/original/car-rental-illustration-logo-design-vector.jpg">
+  
+
+      <style>
+        *{
+            font-family: "Noto Sans", sans-serif;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-dark fixed-top">
+        <div class="container-fluid border">
+          <a class="navbar-brand text-light" href="#">Car Rental</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">Cars</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  About us
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled text-light" aria-disabled="true">Reviews</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <!--Banner-->
+
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img height="400px" src="https://www.group1auto.co.uk/images/paras/3210.jpg?v=1626335754" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="text-white">GET THE BEST CAR FOR RENT</h5>
+              <p>Get upto 50% Discount</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img height="400px" src="https://www.usebusinesstips.com/wp-content/uploads/2018/08/Vehicle-Rental-Business.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h4 clsass="text-dark"></h4>
+              <p></p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img height="400px" src="https://www.autobidmaster.com/blog/wp-content/uploads/Main-image-Car-Rental.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="third">Rent Car In Worldwide</h5>
+              <p >Great Rental Offers For You!</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+      
+
+      <!--Why choose us-->
+      <section class="">
+        <br>
+      <div>
+        <h1 class="text-center">Why choose us?</h1>
+      </div>
+      <br>
+
+      <div class="row">
+        <div class="col-4">
+            <div class="card border border-4 border-dark bg-light" style="width: 18rem;">
+                <img height="100px" src="https://thumbs.dreamstime.com/b/car-fleet-icon-car-fleet-icon-clipart-image-isolated-white-background-125528989.jpg?w=768" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Diverse Fleet</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-dark">Learn more</a>
+                </div>
+              </div>
+
+        </div>
+        <div class="col-4">
+
+            <div class="card border border-4 border-dark bg-light" style="width: 18rem;">
+                <img height="100px" src="https://th.bing.com/th/id/OIP.jdPR9n1kEhrGF_S9TU54MwHaHa?rs=1&pid=ImgDetMain" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Fast and Safe</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-dark">Learn more</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-4">
+
+          <div class="card border border-4 border-dark bg-light" style="width: 18rem;">
+            <img height="100px" src="https://th.bing.com/th/id/OIP.q5ERNtAE6WXQcRAUuPI4cQHaEl?rs=1&pid=ImgDetMain" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Experience Drivers</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-dark">Learn more</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      </section>
+
+      <!--Car collections-->
+
+      <section class="">
+        <br>
+      <div>
+        <h1 class="text-center">Our Car Collections</h1>
+      </div>
+      <br>
+      
+      <div class="row">
+        <div class="col-4">
+          <div class="card  border border-4 border-dark" style="width: 18rem; height: 360px;">
+            <img src="https://www.topgear.com/sites/default/files/2022/12/22C0378_015.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Mercedes Benz</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Book Now <i class="fa-solid fa-phone-flip"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="card  border border-4 border-dark" style="width: 18rem; height: 360px;">
+            <img src="https://wallpapercave.com/wp/wp7407310.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Rolls Royce</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Book Now <i class="fa-solid fa-phone-flip"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="card  border border-4 border-dark" style="width: 18rem; height: 360px;">
+            <img height="160px" src="https://mediacloud.carbuyer.co.uk/image/private/s--V3Ik1_FY--/v1579624421/carbuyer/2018/06/p90303990_highres.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">B M W</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Book Now <i class="fa-solid fa-phone-flip"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div class="row">
+
+        <div class="col-4">
+
+          <div class="card  border border-4 border-dark" style="width: 18rem; height: 360px;">
+            <img height="160px" src="https://images.hdqwalls.com/wallpapers/lamborghini-aventador-sv-2018-s4.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Lamborgini</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Book Now <i class="fa-solid fa-phone-flip"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4">
+
+          <div class="card border border-4 border-dark" style="width: 18rem; height: 360px;">
+            <img src="https://auto-drive.pt/wp-content/uploads/2022/10/2023-porsche-911-carrera-t-in-gulf-blue-1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Porsche</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Book Now <i class="fa-solid fa-phone-flip"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4">
+
+          <div class="card border border-4 border-dark" style="width: 18rem; height: 360px;">
+            <img  height="160px" src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Bugatti_Veyron_16.4_%E2%80%93_Frontansicht_(1),_5._April_2012,_D%C3%BCsseldorf.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Bugatti</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Book Now <i class="fa-solid fa-phone-flip"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+
+      </section>
+
+      <!--Book your car-->
+
+      <section class="border border-4">
+        <h1 class="text-center p-2">Book Your Slot</h1>
+        <div class="row">
+          <div class="col-6 bg-danger p-4">
+
+            <form class="row g-3 needs-validation" novalidate>
+              <div class="col-md-4">
+                <label for="validationCustom01" class="form-label">Name</label>
+                <input type="text" class="form-control" id="validationCustom01" value="" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label for="validationCustom02" class="form-label">Pick-Up-Date</label>
+                <input type="date" name="begin" placeholder="dd-mm-yyyy" 
+                  value="" min="1997-01-01" max="2030-12-31">
+  
+                <div class="valid-feedback">
+                
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label for="validationCustomUsername" class="form-label">Return Date</label>
+                <input type="date" name="begin" placeholder="dd-mm-yyyy" 
+                 value="" min="1997-01-01" max="2030-12-31">
+                <div class="input-group has-validation">
+               
+                  <div class="invalid-feedback">
+                    Please choose a username.
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="validationCustom03" class="form-label">City</label>
+                <input type="text" class="form-control" id="validationCustom03" required>
+                <div class="invalid-feedback">
+                  Please provide a valid city.
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label for="validationCustom04" class="form-label">State</label>
+                <select class="form-select" id="validationCustom04" required>
+                  <option selected disabled value=""></option>
+                  <option>Kerala</option>
+                  <option>Karnataka</option>
+                  <option>Tamil Nadu</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid state.
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label for="validationCustom05" class="form-label">Comments</label>
+                <input type="text" class="form-control" id="validationCustom05" required>
+                <div class="invalid-feedback">
+                  Please provide a valid zip.
+                </div>
+              </div>
+              <div class="col-12">
+              <button type="button" class="btn btn-warning">Select My Car</button>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                  <label class="form-check-label" for="invalidCheck">
+                    Agree to terms and conditions
+                  </label>
+                  <div class="invalid-feedback">
+                    You must agree before submitting.
+                  </div>
+                </div>
+              </div>
+          
+              <div class="col-12">
+                <button class="btn btn-dark" type="submit">Submit</button>
+              </div>
+            </form>
+
+          </div>
+          <div class="col-6 p-4">
+            <img src="https://cdn.vectorstock.com/i/500p/86/00/logo-for-car-rental-and-sales-vector-25468600.jpg" height="300px" width="300px" alt="">
+          </div>
+        </div>
+
+        <br><br>
+      </section>
+      
+
+      <!--Reviews-->
+
+      <section class="border border-4 p-3">
+        <br>
+      <div>
+        <h1 class="text-center">Client Reviews</h1>
+      </div>
+      <br>
+
+      <div class="row">
+
+        <div class="col-4">
+          <div class="card border border-4 border-dark pl-3" style="width: 18rem;">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          <div style="float:left;">
+              <img height="50px" width="50px"   class="rounded-circle p-2"  src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg" class="card-img-top" alt="...">  Michael T
+          </div>
+        </div>
+        </div>
+
+        <div class="col-4">
+          <div class="card border border-4 border-dark" style="width: 18rem;">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          <div style="float:left;">
+              <img height="50px" width="50px"   class="rounded-circle p-2"  src="https://www.allprodad.com/wp-content/uploads/2021/03/05-12-21-happy-people.jpg" class="card-img-top" alt="...">  Sabir KM
+          </div>
+        </div>
+        </div>
+
+
+        <div class="col-4">
+          <div class="card border border-4 border-dark" style="width: 18rem;">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          <div style="float:left;">
+              <img height="50px" width="50px"   class="rounded-circle p-2"  src="https://c.pxhere.com/photos/08/7a/male_portrait_profile_social_media_cv_young_elegant_suit-459413.jpg!d" class="card-img-top" alt="...">  William A
+          </div>
+        </div>
+        </div>
+
+       </div> 
+
+       <br>
+
+      </section>
+      <br><br>
+
+      <!--Connect-->
+      <section>
+        <h1 class="text-center">Get In Touch For Your Dream Ride!</h1>
+
+        <div class="row">
+          <div class="col-6 bg-warning p-3">
+      <div class="form-floating mb-2">
+        <input type="name" class="form-control" id="floatingInputDisabled" placeholder="name">
+        <label for="floatingInputDisabled">Name</label>
+      </div>
+      <div class="form-floating mb-2">
+        <input type="email" class="form-control" id="floatingInputDisabled" placeholder="email">
+        <label for="floatingInputDisabled">Email address</label>
+      </div>
+      <div class="form-floating mb-2">
+        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextareaDisabled"></textarea>
+        <label for="floatingTextareaDisabled">Phone</label>
+      </div>
+      <div class="form-floating mb-2">
+        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2Disabled" style="height: 100px"></textarea>
+        <label for="floatingTextarea2Disabled">Comments</label>
+      </div>
+      <button type="button" class="btn btn-dark">Submit</button>
+      </div>
+
+      <div class="col-6">
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31421.431384397965!2d76.4632219931849!3d10.125345809123159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07e28b013dc1dd%3A0xad1e2618a2a7059!2sPerumbavoor%2C%20Kerala!5e0!3m2!1sen!2sin!4v1722578379805!5m2!1sen!2sin" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      </div>
+      </div>
+      </section>
+      <br><br>
+
+      <!--Footer-->
+
+      <section>
+
+        <footer class="bg-body-tertiary text-center border border">
+          <!-- Grid container -->
+          <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+              <!-- Facebook -->
+              <a
+              data-mdb-ripple-init
+                class="btn text-white btn-floating m-1"
+                style="background-color: #3b5998;"
+                href="#!"
+                role="button"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+        
+              <!-- Twitter -->
+              <a
+                data-mdb-ripple-init
+                class="btn text-white btn-floating m-1"
+                style="background-color: #55acee;"
+                href="#!"
+                role="button"
+                ><i class="fab fa-twitter"></i
+              ></a>
+        
+              <!-- Google -->
+              <a
+                data-mdb-ripple-init
+                class="btn text-white btn-floating m-1"
+                style="background-color: #dd4b39;"
+                href="#!"
+                role="button"
+                ><i class="fab fa-google"></i
+              ></a>
+        
+              <!-- Instagram -->
+              <a
+                data-mdb-ripple-init
+                class="btn text-white btn-floating m-1"
+                style="background-color: #ac2bac;"
+                href="#!"
+                role="button"
+                ><i class="fab fa-instagram"></i
+              ></a>
+        
+              <!-- Linkedin -->
+              <a
+                data-mdb-ripple-init
+                class="btn text-white btn-floating m-1"
+                style="background-color: #0082ca;"
+                href="#!"
+                role="button"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <!-- Github -->
+              <a
+                data-mdb-ripple-init
+                class="btn text-white btn-floating m-1"
+                style="background-color: #333333;"
+                href="#!"
+                role="button"
+                ><i class="fab fa-github"></i
+              ></a>
+            </section>
+            <!-- Section: Social media -->
+          </div>
+          <!-- Grid container -->
+        
+          <!-- Copyright -->
+          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2024 Copyright:
+            <a class="text-body" href="https://Carrental.com/">Carrental.com</a>
+          </div>
+          <!-- Copyright -->
+        </footer>
+
+
+      </section>
+
+    
+</body>
+</html>
